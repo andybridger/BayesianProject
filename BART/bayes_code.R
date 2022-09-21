@@ -14,7 +14,8 @@ lapply(c('devtools', 'ggplot2', 'readr', 'dplyr', 'tidyr', 'sandwich', 'rJava',
 options(java.parameters = "-Xmx2500m")
 
 #download csv from my Github
-urlfile="https://raw.githubusercontent.com/andybridger/uni/main/BART/epu_data.csv"
+urlfile="https://raw.githubusercontent.com/andybridger/BayesianProject/main/BART/epu_data.csv"
+
 epu_data<-read_csv(url(urlfile))
 
 #get details on dataset
@@ -53,6 +54,7 @@ df <- subset(epu_data_m1,
                         'Ireland', 'Italy', 'Japan', 'Korea',
                         'Netherlands', 'Russia', 'Spain', 'UK',
                         'US', 'Mainland China'))
+
 #change to dataframe in order to run in bartMachine
 df<- as.data.frame(df)
 
