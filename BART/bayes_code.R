@@ -14,6 +14,7 @@ lapply(c('devtools', 'ggplot2', 'readr', 'dplyr', 'tidyr', 'sandwich', 'rJava',
 options(java.parameters = "-Xmx2500m")
 
 #download csv from my Github
+#Economic Policy Uncertainty (the epu data) is sourced from www.policyuncertainty.com
 urlfile="https://raw.githubusercontent.com/andybridger/BayesianProject/main/BART/epu_data.csv"
 
 epu_data<-read_csv(url(urlfile))
